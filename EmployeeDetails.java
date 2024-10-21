@@ -20,9 +20,14 @@ class Manager extends Employee
 {
 	String department;
 	
-	Manager(String name, float salary, String dep)
+	// Manager(String name, float salary, String dep)
+	// {
+	// 	super(name,salary);
+	// 	this.department = dep;
+	// };
+	Manager(String dep)
 	{
-		super(name,salary);
+		super("ashish",9.9f);
 		this.department = dep;
 	};
 	
@@ -38,9 +43,10 @@ class EmployeeDetails
 	public static void main(String[] args)
 	{
 		Employee emp = new Employee("sidharth", 9.2f);
-		Manager man = new Manager("ASHISH",9.9F,"MCA");
+		// Manager man = new Manager("ASHISH",9.9F,"MCA");
+		Manager man = new Manager("MCA");
 		emp.display();
-		man.display();
+		man.display(); //why it is showing null values for name and salary
 	}
 
 }
